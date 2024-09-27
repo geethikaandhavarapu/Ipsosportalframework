@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="CD Region Sanity Tests">
+
+    <listeners>
+        <listener class-name="com.ipsos.cd.selenium.listeners.AnnotationTransformer"/>
+    </listeners>
+    <test name="CD Region Sanity Test" parallel="methods">
+        <groups>
+            <run>
+                <include name="SANITY"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.ipsos.cd.selenium.common"/>
+            <package name="com.ipsos.cd.selenium.projects.region.testcases"/>
+        </packages>
+        <!--classes>
+            <class name="com.ipsos.cd.selenium.projects.region.testcases.LoginTest"/>
+        </classes-->
+    </test>
+
+</suite>

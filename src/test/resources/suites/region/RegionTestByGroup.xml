@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="CD Region Smoke Tests" verbose="1">
+
+    <listeners>
+        <listener class-name="com.ipsos.cd.selenium.listeners.AnnotationTransformer"/>
+    </listeners>
+    <parameter name="testGroup" value="M001L001TC002" />
+    <test name="CD Region Smoke Test" parallel="methods">
+        <groups>
+            <run>
+                <include name="M001L001TC002"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.ipsos.cd.selenium.common"/>
+            <package name="com.ipsos.cd.selenium.projects.region.testcases"/>
+        </packages>
+    </test>
+
+</suite>
